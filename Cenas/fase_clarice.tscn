@@ -1,0 +1,192 @@
+[gd_scene load_steps=11 format=3 uid="uid://dbiboomuruaf8"]
+
+[ext_resource type="PackedScene" uid="uid://rjec70jjexa8" path="res://sheldon.tscn" id="1_h0egj"]
+[ext_resource type="Script" path="res://Cenas/a.gd" id="2_qrsmp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mbry5"]
+size = Vector2(33, 37)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m2ykl"]
+size = Vector2(26, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ayrhd"]
+size = Vector2(26, 39)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wi11l"]
+size = Vector2(31, 37)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x8rqt"]
+size = Vector2(21, 37)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r5m63"]
+size = Vector2(20, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vteuu"]
+size = Vector2(30, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rtj7q"]
+size = Vector2(28, 38)
+
+[node name="Fase_Clarice" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(578, 324)
+scale = Vector2(60, 60)
+position_smoothing_enabled = true
+
+[node name="Sheldon" parent="." instance=ExtResource("1_h0egj")]
+z_index = 4
+position = Vector2(578, 542)
+
+[node name="Letras" type="Node" parent="."]
+
+[node name="A" type="Area2D" parent="Letras"]
+position = Vector2(750, 250)
+collision_layer = 2
+script = ExtResource("2_qrsmp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Letras/A"]
+position = Vector2(16.5, 34.5)
+shape = SubResource("RectangleShape2D_mbry5")
+
+[node name="A" type="Label" parent="Letras/A"]
+offset_top = -1.0
+offset_right = 33.0
+offset_bottom = 68.0
+theme_override_font_sizes/font_size = 50
+text = "A"
+
+[node name="B" type="Area2D" parent="Letras"]
+position = Vector2(800, 250)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Letras/B"]
+position = Vector2(18, 36)
+shape = SubResource("RectangleShape2D_m2ykl")
+
+[node name="B" type="Label" parent="Letras/B"]
+offset_right = 33.0
+offset_bottom = 69.0
+theme_override_font_sizes/font_size = 50
+text = "B"
+
+[node name="C" type="Area2D" parent="Letras"]
+position = Vector2(850, 250)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Letras/C"]
+position = Vector2(16, 36.5)
+shape = SubResource("RectangleShape2D_ayrhd")
+
+[node name="C" type="Label" parent="Letras/C"]
+offset_right = 33.0
+offset_bottom = 69.0
+theme_override_font_sizes/font_size = 50
+text = "C"
+
+[node name="D" type="Area2D" parent="Letras"]
+position = Vector2(900, 250)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Letras/D"]
+position = Vector2(19.5, 36.5)
+shape = SubResource("RectangleShape2D_wi11l")
+
+[node name="D" type="Label" parent="Letras/D"]
+offset_right = 37.0
+offset_bottom = 69.0
+theme_override_font_sizes/font_size = 50
+text = "D"
+
+[node name="E" type="Area2D" parent="Letras"]
+position = Vector2(750, 350)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Letras/E"]
+position = Vector2(14.5, 35.5)
+shape = SubResource("RectangleShape2D_x8rqt")
+
+[node name="E" type="Label" parent="Letras/E"]
+offset_right = 33.0
+offset_bottom = 69.0
+theme_override_font_sizes/font_size = 50
+text = "E"
+
+[node name="F" type="Area2D" parent="Letras"]
+position = Vector2(800, 350)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Letras/F"]
+position = Vector2(14, 35)
+shape = SubResource("RectangleShape2D_r5m63")
+
+[node name="F" type="Label" parent="Letras/F"]
+offset_right = 33.0
+offset_bottom = 69.0
+theme_override_font_sizes/font_size = 50
+text = "F"
+
+[node name="G" type="Area2D" parent="Letras"]
+position = Vector2(850, 350)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Letras/G"]
+position = Vector2(18, 36)
+shape = SubResource("RectangleShape2D_vteuu")
+
+[node name="G" type="Label" parent="Letras/G"]
+offset_right = 36.0
+offset_bottom = 69.0
+theme_override_font_sizes/font_size = 50
+text = "G"
+
+[node name="H" type="Area2D" parent="Letras"]
+position = Vector2(900, 350)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Letras/H"]
+position = Vector2(19, 35)
+shape = SubResource("RectangleShape2D_rtj7q")
+
+[node name="H" type="Label" parent="Letras/H"]
+offset_right = 38.0
+offset_bottom = 69.0
+theme_override_font_sizes/font_size = 50
+text = "H"
+
+[node name="Palavras" type="Node" parent="."]
+
+[node name="Caba" type="Node" parent="Palavras"]
+
+[node name="cDeCaba" type="Label" parent="Palavras/Caba"]
+visible = false
+offset_left = 200.0
+offset_top = 100.0
+offset_right = 232.0
+offset_bottom = 169.0
+theme_override_font_sizes/font_size = 50
+text = "C"
+
+[node name="aDeCaba1" type="Label" parent="Palavras/Caba"]
+visible = false
+offset_left = 250.0
+offset_top = 100.0
+offset_right = 282.0
+offset_bottom = 169.0
+theme_override_font_sizes/font_size = 50
+text = "A"
+
+[node name="bDeCaba" type="Label" parent="Palavras/Caba"]
+visible = false
+offset_left = 300.0
+offset_top = 100.0
+offset_right = 332.0
+offset_bottom = 169.0
+theme_override_font_sizes/font_size = 50
+text = "B"
+
+[node name="aDeCaba2" type="Label" parent="Palavras/Caba"]
+visible = false
+offset_left = 350.0
+offset_top = 100.0
+offset_right = 382.0
+offset_bottom = 169.0
+theme_override_font_sizes/font_size = 50
+text = "A"
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="Letras/A" to="Letras/A" method="_on_body_entered"]

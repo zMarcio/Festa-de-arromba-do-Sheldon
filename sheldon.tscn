@@ -143,6 +143,7 @@ size = Vector2(3, 2.03333)
 
 [node name="Sheldon" type="CharacterBody2D"]
 scale = Vector2(3, 3)
+collision_mask = 2
 script = ExtResource("1_2k51y")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
